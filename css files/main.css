@@ -1,0 +1,119 @@
+:root {
+    --main-color:  rgb(246, 117, 94);
+    --secound-color: rgb(37, 162, 195);
+    --trasition: 0.5s;
+}
+/* .container {
+    /* margin: auto;   */
+} */
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+* {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;  
+}
+.header {
+    box-shadow: 0px 1px 5px -1px #0000001a;
+}
+.header h2 {
+    font-family: 'Dancing Script', cursive;
+}
+.header button {
+    outline: none;
+    height: fit-content;
+    border: 0.5px solid rgba(0, 0, 0, 0.193);
+    font-weight: 400;
+    border-radius: 2px;
+    opacity: 0.5;
+    background-color: white;
+    transition: var(--trasition);
+}
+.header button:hover {
+    background-color: #eee;
+}
+.bars{
+    cursor: pointer;
+}
+.left {
+    background-color: var(--secound-color);
+    transition: 1s;
+}
+
+.left ul li {
+    padding: 15px 200px 20px 0px;
+}
+.left ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.343);
+}
+.left ul li a {
+    color: white;
+    opacity: 0.75;
+    transition: var(--trasition);
+}
+.left ul li a:hover {
+    opacity: 1;
+}
+.left i {
+    opacity: 0.5;
+    color: white;
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+    transition: var(--trasition);
+}
+.left i:hover {
+    opacity: 1;
+}
+.componntBtn {
+    outline: none;
+    height: fit-content;
+    border: 0.5px solid rgba(0, 0, 0, 0.193);
+    font-weight: 400;
+    border-radius: 4px;
+    background-color: var(--main-color);
+    transition: var(--trasition);
+    margin: auto;
+    color: white;
+    padding: 10px 80px;
+    max-height: fit-content;
+}
+.componntBtn:hover {
+    background-color: rgb(227, 129, 112);
+}
+.banner {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+.up {
+    transition: var(--trasition);
+}
+.up h1 {
+    font-size: 50px;
+}
+.up p {
+    font-size: 20px;
+}
+@media(max-width:960px) {
+    .up h1 {
+        font-size: 30px;
+    }
+    .up p {
+        font-size: 15px;
+    }
+}
+.wrapper {
+    /* height: 70vh; */
+}
