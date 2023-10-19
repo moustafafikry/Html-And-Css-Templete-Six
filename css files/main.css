@@ -3,11 +3,14 @@
     --secound-color: rgb(37, 162, 195);
     --trasition: 0.5s;
 }
-/* .container {
-    /* margin: auto;   */
-} */
+.header {
+    min-height: 96px;
+}
 body {
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+input {
+    outline: none;
 }
 * {
     -webkit-box-sizing:border-box;
@@ -21,7 +24,8 @@ ul li {
     list-style: none;
 }
 a {
-    text-decoration: none;  
+    text-decoration: none;
+    color: black;  
 }
 .header {
     box-shadow: 0px 1px 5px -1px #0000001a;
@@ -44,6 +48,8 @@ a {
 }
 .bars{
     cursor: pointer;
+    opacity: 0.3;
+    box-shadow: 0 0 0 0 black;
 }
 .left {
     background-color: var(--secound-color);
@@ -64,14 +70,6 @@ a {
 .left ul li a:hover {
     opacity: 1;
 }
-.left i {
-    opacity: 0.5;
-    color: white;
-    width: 100%;
-    text-align: right;
-    cursor: pointer;
-    transition: var(--trasition);
-}
 .left i:hover {
     opacity: 1;
 }
@@ -85,8 +83,10 @@ a {
     transition: var(--trasition);
     margin: auto;
     color: white;
-    padding: 10px 80px;
+    padding: 10px 50px;
     max-height: fit-content;
+    cursor: pointer;
+    text-align: center;
 }
 .componntBtn:hover {
     background-color: rgb(227, 129, 112);
@@ -99,6 +99,38 @@ a {
 }
 .up {
     transition: var(--trasition);
+    animation: done 2s  alternate linear;
+}
+@keyframes done {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.contact {
+    animation: none;
+}
+.wrapper .row {
+    opacity: 0;
+    transition: 1s;
+}
+.Feugiat .container {
+    opacity: 0;
+    transition: 1s;
+}
+.info .row {
+    opacity: 0;
+    transition: 1s;
+}
+.footer .container {
+    opacity: 0;
+    transition: 1s;
+}
+.last {
+    opacity: 0;
+    transition: 1s;
 }
 .up h1 {
     font-size: 50px;
@@ -114,6 +146,102 @@ a {
         font-size: 15px;
     }
 }
-.wrapper {
-    /* height: 70vh; */
+.contact {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    z-index: 1;
+}
+.contact i {
+    opacity: 0.7;
+}
+.contact i:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.contact a {
+    color: white;
+    transition: var(--trasition);
+}
+.contact a:hover {
+    color: red;
+}
+@media(max-width:885px) {
+    .inputs input {
+        width: 100%;
+    }
+}
+.to-up {
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: var(--trasition);
+    animation: none;
+    display: none;
+}
+.to-up:hover {
+    background-color: rgb(167, 90, 76);
+}
+.to-up i {
+    animation: go-up 0.5s infinite alternate;
+}
+@keyframes go-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+.submit,
+.reset {
+    transition: var(--trasition);
+}
+.submit:hover,
+.reset:hover {
+    background-color: rgb(227, 129, 112);
+}
+.alarm {
+    transition: var(--trasition);
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.sidebar {
+    top: 96px;
+    left: 0;
+    height: 90%;
+    transition: var(--trasition);
+    opacity: 0;
+}
+.sidebar ul li {
+    padding: 30px 150px 30px 10px;
+    cursor: pointer;
+}
+.sidebar ul li:not(:last-child) {
+    border-bottom: 1px solid #eeeeee8e;
+}
+.sidebar ul li a {
+    opacity: 0.8;
+}
+.sidebar ul li a:hover {
+    opacity: 1;
+}
+.sidebar i {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: var(--trasition);
+}
+.sidebar i:hover {
+    opacity: 1;
+}
+/* start-genric */
+.register .container .search {
+    background-color: var(--main-color);
+}
+.register .container .search input {
+    border: none;
+    outline: none;
 }
