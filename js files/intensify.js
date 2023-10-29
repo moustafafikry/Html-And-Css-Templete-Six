@@ -113,31 +113,38 @@ window.onscroll = function () {
 }
 // forms 
 
-let user = document.querySelector("form .user");
-let password = document.querySelector("form .password");
-let email = document.querySelector("form .email");
 let submit = document.querySelector("form .submit");
+document.getElementById("form").onsubmit = function () {
+    let user = document.querySelector("form .user").value;
+    let password = document.querySelector("form .password").value;
+    let email = document.querySelector("form .email").value;
+    let userRe = /\w+-?\w+\d+/ig; // Moustafa-fikry999
+    let validationresultUser = userRe.test(user);
+    console.log(validationresultUser);
+    if (validationresultUser === false) {
+        return false;
+    } else if (validationresultUser === true) {
+        window.localStorage.setItem("User", user);
+    }
+    let passwordRe = /(\w+)?\d{8}(\w+)?/ig // 
+    let validationresultPass = passwordRe.test(password);
+    console.log(validationresultPass);
+    if (validationresultPass === false) {
+        return false;
+    } else if (validationresultPass === true) {
+        window.localStorage.setItem("Password", password);
+    }
+    let emailRe = /\w+\d?@gmail.(com|org|net)/ig; // mostafafikry@gmail.(com|org)
+    let validationresultEmail = emailRe.test(email);
+    console.log(validationresultEmail);
+    if (validationresultEmail === false) {
+        return false;
+    } else if (validationresultEmail === true) {
+        window.localStorage.setItem("Email", email);
+    }
 
-submit.onclick = function () {
-    if (user.value.length >= 10) {
-        window.localStorage.setItem("User", user.value);
-        console.log("User Is Valid");
-    } else {
-        console.log("%cTake Care MinMum 10 letters!", "color: red")
-    }
-    if (password.value.length >= 8) {
-        window.localStorage.setItem("Password", password.value);
-        console.log("Pssword Is Valid");
-    } else {
-        console.log("%cTake Care MinMum 8 letters And Numbers!", "color: red")
-    }
-    if (email.value.length >= 8) {
-        window.localStorage.setItem("Email", email.value);
-        console.log("Email Is Valid");
-    } else {
-        console.log("%cTake Care Your Email Not Valued!", "color: red")
-    }
-};
+    return true;
+}
 
 let reset = document.querySelector(".inputs .reset");
 

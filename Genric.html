@@ -31,18 +31,37 @@
                 <p class="text-center fs-4 opacity-25 ">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
                 <p class="fs-5 opacity-50 mt-5">Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
                 <p class="fs-5 opacity-50 mt-5">Aenean iaculis, neque sed pretium egestas, nunc lacus tempus enim, nec tincidunt urna massa a libero. Aenean mattis bibendum est, a pharetra elit. Morbi commodo lectus quis blandit mattis. Cras pharetra quam quis tincidunt tempus. Donec a sem magna. Nullam purus purus, fermentum id lorem sit amet, porta elementum neque. Proin vulputate metus ac faucibus luctus.</p>
-                <p class="fs-5 opacity-50 mt-5">Ut congue purus sed elit consectetur tempus. Duis convallis, quam quis pellentesque vestibulum, tellus arcu hendrerit ante, sed dictum felis nisl vitae magna. Integer et sapien a erat molestie tempor. Cras est odio, suscipit id porttitor id, mollis et ligula. Curabitur molestie mi molestie accumsan faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer porta malesuada pellentesque. Morbi imperdiet dictum velit, eu volutpat sem posuere non. Fusce ullamcorper gravida velit, sed sollicitudin libero iaculis id. Ut eu neque non odio fringilla faucibus nec quis neque. Quisque et nisi fermentum, tincidunt libero a, condimentum ligula. Quisque ultrices blandit lacinia. Nulla velit lorem, placerat nec eros ut, fermentum pharetra dolor. Maecenas arcu ipsum, mattis et suscipit sed, convallis nec lectus. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>    
+                <p id="searchParagraph" class="fs-5 opacity-50 mt-5">Ut congue purus sed elit consectetur tempus. Duis convallis, quam quis pellentesque vestibulum, tellus arcu hendrerit ante, sed dictum felis nisl vitae magna. Integer et sapien a erat molestie tempor. Cras est odio, suscipit id porttitor id, mollis et ligula. Curabitur molestie mi molestie accumsan faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer porta malesuada pellentesque. Morbi imperdiet dictum velit, eu volutpat sem posuere non. Fusce ullamcorper gravida velit, sed sollicitudin libero iaculis id. Ut eu neque non odio fringilla faucibus nec quis neque. Quisque et nisi fermentum, tincidunt libero a, condimentum ligula. Quisque ultrices blandit lacinia. Nulla velit lorem, placerat nec eros ut, fermentum pharetra dolor. Maecenas arcu ipsum, mattis et suscipit sed, convallis nec lectus. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>    
             </div>
         </div>
-        <div class="register p-2">
-            <div class="container">
+        <div class="register p-2 mb-5">
+            <div class="container mb-5">
                 <div class="row d-flex justify-content-between align-items-center">
-                    <div class="image col-md-12 col-lg-6 text-center text-sm-start mb-5 mb-sm-0">
+                    <div class="image col-md-12 col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
                         <img class="w-50" src="./images/work-steps.png" alt="">
                     </div>
                     <div class="search p-3 col-md-12 col-lg-6 rounded-4 d-flex justify-content-between">
-                        <input class="w-100 p-3 rounded-4" type="search" placeholder="search">
-                        <input type="submit" class="p-3 w-auto rounded-4 ms-4 s-bg-color text-light fw-bold">
+                        <input id="search" class="w-100 p-3 rounded-4" type="search" placeholder="search">
+                        <input id="submit" type="submit" class="p-3 w-auto rounded-4 ms-4 s-bg-color text-light fw-bold">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer text-center border-bottom s-bg-color pt-5 pb-5">
+            <div class="container">
+                <h2 class="text-light fw-bold pt-3 pb-3">Get In Touch</h2>
+                <div class="row justify-content-around pt-4 pb-4">
+                    <div class="span col-md-5 col-lg-3 mb-3 mb-lg-0">
+                        <i class="fa-solid fa-phone fa-md m-color me-2"></i>
+                        <span class="text-light fw-bold opacity-75">01277924036</span>
+                    </div>
+                    <div class="span col-md-5 col-lg-3">
+                        <i class="fa-solid fa-envelope fa-md m-color me-2 mb-3 mb-lg-0"></i>
+                        <span class="text-light fw-bold opacity-75">moustafafikry401@gmail.com</span>
+                    </div>
+                    <div class="span col-md-5 col-lg-3 mb-3 mb-lg-0">
+                        <i class="fa-solid fa-location-dot fa-lg m-color me-2"></i>
+                        <span class="text-light fw-bold opacity-75">122 Smoha new, alexandria</span>
                     </div>
                 </div>
             </div>
@@ -71,7 +90,7 @@
     <div class="contact position-absolute s-bg-color p-3 text-center rounded-3">
         <i class="close fa-solid fa-xmark fa-sm fs-4 text-light float-end pt-2"></i>
         <h3 class="text-center text-light fw-bold pt-3 pb-3">Log In</h3>
-        <form action="" class="justify-content-center align-items-center">
+        <form id="form" action="" class="justify-content-center align-items-center">
             <div class="inputs">
                 <input class="user rounded-1 p-2 mt-3 mb-4 border-0 " type="userName" placeholder="username">
                 <input class="password rounded-1 border-0 p-2 mt-3 mb-3" type="password" placeholder="password">
@@ -85,11 +104,7 @@
         <a class="float-end fw-bold" href="#">I Havn't Account</a>
         <div class="alarm w-100 position-absolute m-bg-color text-light p-3 fw-bold rounded-2">Sorry, Not Avalible Now.</div>
         </div>
-        <div class="to-up position-fixed m-4 p-2 m-bg-color text-light fs-5 rounded-2  fw-bold">
-            <i class="fa-solid fa-arrow-up fa-xs fs-5 me-2"></i>
-            up
-        </div>
         <script src="./js files/bootstrap.bundle.min.js"></script>
-        <script src="./js files/main.js"></script>
+        <script src="./js files/Genric.js"></script>
 </body>
 </html>

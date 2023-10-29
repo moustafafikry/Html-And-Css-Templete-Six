@@ -91,6 +91,61 @@ a {
 .componntBtn:hover {
     background-color: rgb(227, 129, 112);
 }
+.componntBtn2 {
+    outline: none;
+    height: fit-content;
+    border: 0.5px solid rgba(0, 0, 0, 0.193);
+    font-weight: 400;
+    border-radius: 4px;
+    background-color: var(--secound-color);
+    transition: var(--trasition);
+    margin: auto;
+    color: white;
+    padding: 10px 50px;
+    max-height: fit-content;
+    cursor: pointer;
+    text-align: center;
+}
+.componntBtn2:hover {
+    background-color: rgb(37, 115, 137);
+}
+.componntBtn3 {
+    outline: none;
+    height: fit-content;
+    border: 0.5px solid rgba(0, 0, 0, 0.193);
+    font-weight: 400;
+    border-radius: 4px;
+    background-color: #eee;
+    transition: var(--trasition);
+    margin: auto;
+    color: white;
+    padding: 10px 50px;
+    max-height: fit-content;
+    cursor: pointer;
+    text-align: center;
+}
+.componntBtn3:hover {
+    background-color: #fff2f2;
+}
+.componntBtn4 {
+    outline: none;
+    height: fit-content;
+    border: 0.5px solid rgba(0, 0, 0, 0.193);
+    font-weight: 400;
+    border-radius: 4px;
+    background-color: white;
+    transition: var(--trasition);
+    margin: auto;
+    color: white;
+    padding: 10px 50px;
+    max-height: fit-content;
+    cursor: pointer;
+    text-align: center;
+}
+.componntBtn4:hover {
+    background-color: #fff2f2;
+}
+
 .banner {
     background-image: url(../images/banner.jpg);
     background-size: cover;
@@ -244,4 +299,70 @@ a {
 .register .container .search input {
     border: none;
     outline: none;
+}
+.register .container .row .image img {
+    animation: do 1s alternate infinite;
+}
+
+@keyframes do {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+.search {
+    box-shadow: 0 0 0 0 black;
+}
+.code {
+    letter-spacing: 5px;
+}
+.forms .row input {
+    border: 1px solid #ccc;
+}
+.forms .row input::placeholder {
+    opacity: 50%;
+}
+.forms .row:not(:last-child) input:focus {
+    border: 2px solid var(--secound-color);
+}
+.forms .row select {
+    border: 1px solid #ccc;
+}
+.forms .row select option {
+    color: rgba(0, 0, 0, 0.412);
+}
+.forms .row select:focus {
+    border: 2px solid var(--secound-color);
+}
+.forms .radio input {
+    width: 25px;
+    height: 25px;
+    accent-color: var(--main-color);
+}
+.forms .chek input {
+    width: 25px;
+    height: 25px;
+}
+.forms .row textarea {
+    border: 1px solid #ccc;
+    resize: none;
+}
+.forms .row textarea::placeholder {
+    opacity: 50%;
+}
+.forms .row textarea:focus {
+    outline: none;
+    border: 2px solid var(--secound-color);
+}
+.search .row input {
+    border: 1px solid #ccc;
+}
+.search .row input::placeholder {
+    opacity: 50%;
+}
+.search .row input:focus {
+    outline: none;
+    border: 2px solid var(--secound-color);
 }
